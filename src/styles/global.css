@@ -1,12 +1,68 @@
-/* src/styles/global.css */
-body {
+/* ======= RESET E BASE ======= */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+/* ======= NAVBAR PRINCIPAL ======= */
+.navbar {
+  background-color: #2255ac; /* Azul Google */
+  color: #fff;
+  display: flex;
+  justify-content: flex-end; /* Itens alinhados à direita */
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #fff;
   text-decoration: none;
-  color: inherit;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background-color: #2255ac; /* Azul Google */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ======= LINKS GLOBAIS ======= */
+a {
+  color: #1c5197;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
 }

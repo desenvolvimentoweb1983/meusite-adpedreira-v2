@@ -17,10 +17,12 @@ import slideshow16 from './slideshow16.jpg';
 import slideshow17 from './slideshow17.jpg';
 import slideshow18 from './slideshow18.jpg';
 import slideshow19 from './slideshow19.jpg';
+import slideshow20 from './slideshow20.jpg';
+import slideshow21 from './slideshow21.jpg';
 
 export const slideshowImages = [
   slideshow1, slideshow2, slideshow3, slideshow4, slideshow5,
   slideshow6, slideshow7, slideshow8, slideshow9, slideshow10,
   slideshow11, slideshow12, slideshow13, slideshow14, slideshow15,
-  slideshow16, slideshow17, slideshow18, slideshow19
+  slideshow16, slideshow17, slideshow18, slideshow19, slideshow20, slideshow21
 ];

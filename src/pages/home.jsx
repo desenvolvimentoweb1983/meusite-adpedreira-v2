@@ -1,80 +1,81 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import Slideshow from '../components/slideshow'
 import { slideshowImages } from '../assets/slideshowImages'
 import '../styles/home.css'
 
 // Ícones de navegação horizontal
-import iconHome from '../assets/icons/home.svg'
-import iconJovens from '../assets/icons/jovens.svg'
-import iconLouvor from '../assets/icons/louvor.svg'
-import iconOracao from '../assets/icons/oracao.svg'
-import iconPequeninos from '../assets/icons/pequeninos.svg'
-import iconSobre from '../assets/icons/sobre.svg'
-import iconContato from '../assets/icons/contato.svg'
+import slideshow13 from '../assets/slideshow13.jpg'
+import slideshow6 from '../assets/slideshow6.jpg'
+import slideshow20 from '../assets/slideshow20.jpg'
+import slideshow19 from '../assets/slideshow19.jpg'
+import slideshow4 from '../assets/slideshow4.jpg'
+import slideshow1 from '../assets/slideshow1.jpg'
+import slideshow21 from '../assets/slideshow21.jpg'
 
 // Ícone de compartilhamento para atalhos
 import shareIcon from '../assets/icons/share.svg'
 
 export default function Home() {
-  // Barra de navegação horizontal
+  // Estado para barra de pesquisa
+  const [searchTerm, setSearchTerm] = useState('')
+
+  // Ícones de navegação horizontal
   const navIcons = [
-    { title: 'Home', image: iconHome, link: '/' },
-    { title: 'Ministério de Jovens', image: iconJovens, link: '/ministerio-jovens' },
-    { title: 'Ministério de Louvor', image: iconLouvor, link: '/ministerio-louvor' },
-    { title: 'Oração e Intercessão', image: iconOracao, link: '/oracao-intercessao' },
-    { title: 'Ministério Infantil', image: iconPequeninos, link: '/ministerio-infantil' },
-    { title: 'Sobre', image: iconSobre, link: '/sobre' },
-    { title: 'Contato', image: iconContato, link: '/contato' },
+    { title: 'Grupo de Jovens', image: slideshow13, link: '/ministerio-jovens' },
+    { title: 'Louvor', image: slideshow6, link: '/ministerio-louvor' },
+    { title: 'Orações', image: slideshow20, link: '/oracao-intercessao' },
+    { title: 'Estudo Bíblico', image: slideshow21, link: '/oracao-intercessao' },
+    { title: 'Pequeninos', image: slideshow19, link: '/ministerio-infantil' },
+    { title: 'Sobre', image: slideshow4, link: '/sobre' },
+    { title: 'Contato', image: slideshow1, link: '/contato' },
   ]
 
-  // Atalhos verticais para cada página
+  // Cards verticais
   const shortcuts = [
     {
-      title: 'Cultos e Ministério',
-      description:
-        'Participe dos cultos semanais e conheça os ministérios da Assembleia de Deus Pedreira.',
-      image: slideshowImages[0],
-      link: '/contato',
-    },
-    {
-      title: 'Ministério de Jovens',
+      title: 'Grupo de Jovens',
       description: 'Atividades e encontros para os jovens da congregação.',
-      image: slideshowImages[1],
+      image: slideshowImages[12],
       link: '/ministerio-jovens',
     },
     {
-      title: 'Ministério de Louvor',
+      title: 'Louvor',
       description:
         'Nosso ministério se dedica a conduzir a congregação em adoração através da música.',
-      image: slideshowImages[2],
+      image: slideshowImages[5],
       link: '/ministerio-louvor',
     },
     {
-      title: 'Oração e Intercessão',
+      title: 'Orações',
       description: 'Participe de momentos de oração e intercessão.',
-      image: slideshowImages[3],
+      image: slideshowImages[19],
       link: '/oracao-intercessao',
     },
     {
-      title: 'Ministério Infantil',
+      title: 'Pequeninos',
       description: 'Atividades educativas e espirituais para crianças.',
-      image: slideshowImages[4],
+      image: slideshowImages[18],
       link: '/ministerio-infantil',
     },
     {
       title: 'Sobre',
       description: 'Saiba mais sobre a história e missão da Assembleia.',
-      image: slideshowImages[5],
+      image: slideshowImages[3],
       link: '/sobre',
     },
     {
       title: 'Contato',
       description: 'Entre em contato com a nossa congregação.',
-      image: slideshowImages[6],
+      image: slideshowImages[0],
       link: '/contato',
     },
   ]
+
+  // Filtra os cards conforme o texto digitado
+  const filteredShortcuts = shortcuts.filter((sc) =>
+    sc.title.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
   return (
     <main className="home-container">
@@ -86,15 +87,24 @@ export default function Home() {
         />
       </Helmet>
 
-      {/* H1 principal */}
+      {/* 1. Título da igreja */}
       <h1 className="home-title">Assembleia de Deus JD Triunfo Pedreira - SP</h1>
 
-      {/* Slideshow */}
-      <div className="slideshow-wrapper">
-        <Slideshow images={slideshowImages} />
+      {/* 2. Barra de pesquisa estilo Google */}
+      <div className="home-search-google">
+        <div className="search-box">
+          <span className="search-icon">🔍</span>
+          <input
+            type="text"
+            placeholder="Pesquisar no site..."
+            className="search-input"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
       </div>
 
-      {/* Barra de navegação horizontal de ícones */}
+      {/* 3. Navegação horizontal */}
       <nav className="home-nav-horizontal">
         {navIcons.map((icon, idx) => (
           <a key={idx} href={icon.link} className="nav-icon-horizontal">
@@ -104,9 +114,17 @@ export default function Home() {
         ))}
       </nav>
 
-      {/* Atalhos verticais */}
+      {/* 4. Slideshow */}
+      <div className="slideshow-wrapper">
+        <Slideshow images={slideshowImages} />
+      </div>
+
+      {/* Linha de separação */}
+      <hr className="separator-line" />
+
+      {/* 5. Cards verticais filtrados */}
       <div className="home-shortcuts">
-        {shortcuts.map((sc, idx) => (
+        {filteredShortcuts.map((sc, idx) => (
           <div key={idx} className="shortcut-card">
             <a href={sc.link}>
               <img src={sc.image} alt={sc.title} className="shortcut-image" />
@@ -120,6 +138,12 @@ export default function Home() {
             </div>
           </div>
         ))}
+
+        {filteredShortcuts.length === 0 && (
+          <p style={{ textAlign: 'center', marginTop: '20px' }}>
+            Nenhum resultado encontrado.
+          </p>
+        )}
       </div>
     </main>
   )

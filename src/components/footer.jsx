@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export default function Footer() {
+function Footer() {
   return (
-    <footer style={{ textAlign: 'center', padding: '20px', background: '#f8f8f8', marginTop: '40px' }}>
-      <p>© 2025 Assembleia de Deus JD Triunfo Pedreira. Todos os direitos reservados.</p>
+    <footer>
+      <p>© {new Date().getFullYear()} Assembleia de Deus JD Triunfo Pedreira - SP. Todos os direitos reservados.</p>
     </footer>
-  )
+  );
 }
+
+export default Footer;

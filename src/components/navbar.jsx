@@ -4,10 +4,10 @@ import '../styles/navbar.css' // Caminho correto para a pasta styles
 
 const pages = [
   { name: 'Home', path: '/' },
-  { name: 'Jovens', path: '/ministerio-jovens' },
-  { name: 'Louvor', path: '/ministerio-louvor' },
-  { name: 'Oremos', path: '/oracao-intercessao' },
-  { name: 'Palavra', path: '/estudos-mensagens' },
+  { name: 'Grupo de Jovens', path: '/ministerio-jovens' },
+  { name: 'Louvores', path: '/ministerio-louvor' },
+  { name: 'Orações', path: '/oracao-intercessao' },
+  { name: 'Estudo Bíblico', path: '/estudos-mensagens' },
   { name: 'Pequeninos', path: '/ministerio-infantil' },
   { name: 'Sobre', path: '/sobre' },
   { name: 'Contato', path: '/contato' },
