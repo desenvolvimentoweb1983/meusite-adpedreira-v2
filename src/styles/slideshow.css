@@ -1,0 +1,12 @@
+.slideshow {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.slideshow img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}

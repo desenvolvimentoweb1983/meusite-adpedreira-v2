@@ -1,0 +1,111 @@
+/* Container principal */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center; /* centraliza H1, navbar e atalhos */
+}
+
+/* Título principal */
+.home-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Slideshow */
+.slideshow-wrapper {
+  max-width: 100%;
+  height: 400px; /* ajuste de altura */
+  margin: 0 auto 20px auto; /* centraliza e adiciona espaço abaixo */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navbar horizontal de ícones */
+.home-nav-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.nav-icon-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.nav-icon-horizontal img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+
+/* Atalhos verticais */
+.home-shortcuts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* centraliza os cards */
+  margin-top: 30px;
+}
+
+.shortcut-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px; /* largura máxima dos cards */
+  text-align: center; /* centraliza título e descrição */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shortcut-image {
+  width: 100%;
+  height: 200px; /* altura da imagem */
+  object-fit: cover;
+}
+
+.shortcut-text {
+  padding: 15px;
+}
+
+.shortcut-text h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.shortcut-text p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Botão de compartilhamento */
+.shortcut-share {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.shortcut-share img {
+  width: 24px;
+  height: 24px;
+}
