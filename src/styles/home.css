@@ -196,3 +196,84 @@
   background-clip: text;          /* padrão futuro (Firefox) */
   color: transparent;             /* fallback para navegadores antigos */
 }
+
+/* compartilhar*/
+
+/* Container do botão de compartilhar */
+.share-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botão principal de compartilhar */
+.shortcut-share {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.shortcut-share:hover {
+  background-color: #e0e0e0;
+}
+
+/* Pop-up de compartilhamento */
+.share-popup {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+  animation: popupFade 0.2s ease-out;
+}
+
+/* Ícones dentro do pop-up */
+.share-popup .share-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.share-popup .share-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Botão de copiar link */
+.copy-link-button {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.copy-link-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Animação do pop-up */
+@keyframes popupFade {
+  0% { opacity: 0; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste responsivo: em telas pequenas, pop-up não sai da tela */
+@media (max-width: 480px) {
+  .share-popup {
+    right: auto;
+    left: 0;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}

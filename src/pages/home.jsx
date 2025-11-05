@@ -1,35 +1,29 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import Slideshow from '../components/slideshow'
-import { slideshowImages } from '../assets/slideshowImages'
-import '../styles/home.css'
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Slideshow from '../components/slideshow';
+import { slideshowImages } from '../assets/slideshowImages';
+import '../styles/home.css';
 
 // Ícones de navegação horizontal
-import slideshow13 from '../assets/slideshow13.jpg'
-import slideshow6 from '../assets/slideshow6.jpg'
-import slideshow20 from '../assets/slideshow20.jpg'
-import slideshow19 from '../assets/slideshow19.jpg'
-import slideshow4 from '../assets/slideshow4.jpg'
-import slideshow1 from '../assets/slideshow1.jpg'
-import slideshow21 from '../assets/slideshow21.jpg'
+import slideshow13 from '../assets/slideshow13.jpg';
+import slideshow6 from '../assets/slideshow6.jpg';
+import slideshow20 from '../assets/slideshow20.jpg';
+import slideshow19 from '../assets/slideshow19.jpg';
+import slideshow4 from '../assets/slideshow4.jpg';
+import slideshow1 from '../assets/slideshow1.jpg';
+import slideshow21 from '../assets/slideshow21.jpg';
 
 // Imagens específicas para o slideshow principal
-import slideshow23 from '../assets/slideshow23.jpg'
-import slideshow24 from '../assets/slideshow24.jpg'
-import slideshow25 from '../assets/slideshow25.jpg'
-import slideshow26 from '../assets/slideshow26.jpg'
-import slideshow35 from '../assets/slideshow35.jpg'
-import slideshow36 from '../assets/slideshow36.jpg'
-
-// Ícone de compartilhamento para atalhos
-import shareIcon from '../assets/icons/share.svg'
-
+import slideshow23 from '../assets/slideshow23.jpg';
+import slideshow24 from '../assets/slideshow24.jpg';
+import slideshow25 from '../assets/slideshow25.jpg';
+import slideshow26 from '../assets/slideshow26.jpg';
+import slideshow35 from '../assets/slideshow35.jpg';
+import slideshow36 from '../assets/slideshow36.jpg';
 
 export default function Home() {
-  // Estado para barra de pesquisa
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState('');
 
-  // Ícones de navegação horizontal
   const navIcons = [
     { title: 'Grupo de Jovens', image: slideshow13, link: '/ministerio-jovens' },
     { title: 'Louvor', image: slideshow6, link: '/ministerio-louvor' },
@@ -38,58 +32,21 @@ export default function Home() {
     { title: 'Pequeninos', image: slideshow19, link: '/ministerio-infantil' },
     { title: 'Sobre', image: slideshow4, link: '/sobre' },
     { title: 'Contato', image: slideshow1, link: '/contato' },
-  ]
+  ];
 
-// Cards verticais
-const shortcuts = [
-  {
-    title: 'Grupo de Jovens',
-    description: 'Atividades e encontros para os nossos jovens.',
-    image: slideshowImages[12],
-    link: '/ministerio-jovens',
-  },
-  {
-    title: 'Louvor',
-    description: 'Ministério de louvor e adoração.',
-    image: slideshowImages[5],
-    link: '/ministerio-louvor',
-  },
-  {
-    title: 'Orações',
-    description: 'Venha participar de momentos de oração e libertação.',
-    image: slideshowImages[19],
-    link: '/oracao-intercessao',
-  },
-  {
-    title: 'Estudo Bíblico',
-    description: 'Aprofunde-se na Palavra de Deus e cresça espiritualmente com nossos estudos.',
-    image: slideshowImages[20], // ajuste a imagem conforme desejar
-    link: '/estudos-mensagens',
-  },
-  {
-    title: 'Pequeninos',
-    description: 'Atividades educativas através do Evangelho para as nossas crianças.',
-    image: slideshowImages[18],
-    link: '/ministerio-infantil',
-  },
-  {
-    title: 'Sobre',
-    description: 'Saiba mais sobre a história e missão da Assembleia de Deus Ipiranga.',
-    image: slideshowImages[3],
-    link: '/sobre',
-  },
-  {
-    title: 'Contato',
-    description: 'Entre em contato conosco.',
-    image: slideshowImages[0],
-    link: '/contato',
-  },
-]
+  const shortcuts = [
+    { title: 'Grupo de Jovens', description: 'Atividades e encontros para os nossos jovens.', image: slideshowImages[12], link: '/ministerio-jovens' },
+    { title: 'Louvor', description: 'Ministério de louvor e adoração.', image: slideshowImages[5], link: '/ministerio-louvor' },
+    { title: 'Orações', description: 'Venha participar de momentos de oração e libertação.', image: slideshowImages[19], link: '/oracao-intercessao' },
+    { title: 'Estudo Bíblico', description: 'Aprofunde-se na Palavra de Deus e cresça espiritualmente com nossos estudos.', image: slideshowImages[20], link: '/estudos-mensagens' },
+    { title: 'Pequeninos', description: 'Atividades educativas através do Evangelho para as nossas crianças.', image: slideshowImages[18], link: '/ministerio-infantil' },
+    { title: 'Sobre', description: 'Saiba mais sobre a história e missão da Assembleia de Deus Ipiranga.', image: slideshowImages[3], link: '/sobre' },
+    { title: 'Contato', description: 'Entre em contato conosco.', image: slideshowImages[0], link: '/contato' },
+  ];
 
-  // Filtra os cards conforme o texto digitado
   const filteredShortcuts = shortcuts.filter((sc) =>
     sc.title.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  );
 
   return (
     <main className="home-container">
@@ -101,10 +58,10 @@ const shortcuts = [
         />
       </Helmet>
 
-      {/* 1. Título da igreja */}
+      {/* Título */}
       <h1 className="home-title">Assembleia de Deus JD Triunfo Pedreira - SP</h1>
 
-      {/* 2. Barra de pesquisa estilo Google */}
+      {/* Barra de pesquisa */}
       <div className="home-search-google">
         <div className="search-box">
           <span className="search-icon">🔍</span>
@@ -118,7 +75,7 @@ const shortcuts = [
         </div>
       </div>
 
-      {/* 3. Navegação horizontal */}
+      {/* Navegação horizontal */}
       <nav className="home-nav-horizontal">
         {navIcons.map((icon, idx) => (
           <a key={idx} href={icon.link} className="nav-icon-horizontal">
@@ -128,15 +85,23 @@ const shortcuts = [
         ))}
       </nav>
 
-      {/* 4. Slideshow */}
+      {/* Slideshow */}
       <div className="slideshow-wrapper">
-        <Slideshow images={[slideshow23, slideshow24, slideshow25, slideshow26, slideshow35, slideshow36]} />
+        <Slideshow
+          images={[
+            slideshow23,
+            slideshow24,
+            slideshow25,
+            slideshow26,
+            slideshow35,
+            slideshow36,
+          ]}
+        />
       </div>
 
-      {/* Linha de separação */}
       <hr className="separator-line" />
 
-      {/* 5. Cards verticais filtrados */}
+      {/* Cards verticais filtrados */}
       <div className="home-shortcuts">
         {filteredShortcuts.map((sc, idx) => (
           <div key={idx} className="shortcut-card">
@@ -146,9 +111,6 @@ const shortcuts = [
             <div className="shortcut-text">
               <h2>{sc.title}</h2>
               <p>{sc.description}</p>
-              <button className="shortcut-share">
-                <img src={shareIcon} alt="Compartilhar" />
-              </button>
             </div>
           </div>
         ))}
@@ -160,5 +122,5 @@ const shortcuts = [
         )}
       </div>
     </main>
-  )
+  );
 }
