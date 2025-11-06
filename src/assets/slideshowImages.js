@@ -1,3 +1,5 @@
+// src/assets/slideshowImages.js
+
 import slideshow1 from './slideshow1.jpg';
 import slideshow2 from './slideshow2.jpg';
 import slideshow3 from './slideshow3.jpg';
@@ -24,6 +26,17 @@ import slideshow23 from './slideshow23.jpg';
 import slideshow24 from './slideshow24.jpg';
 import slideshow25 from './slideshow25.jpg';
 import slideshow26 from './slideshow26.jpg';
+import slideshow27 from './slideshow27.jpg';
+import slideshow28 from './slideshow28.jpg';
+import slideshow29 from './slideshow29.jpg';
+import slideshow30 from './slideshow30.jpg';
+import slideshow31 from './slideshow31.jpg';
+import slideshow32 from './slideshow32.jpg';
+import slideshow33 from './slideshow33.jpg';
+import slideshow34 from './slideshow34.jpg';
+import slideshow35 from './slideshow35.jpg';
+import slideshow36 from './slideshow36.jpg';
+import slideshow37 from './slideshow37.jpg';
 
 export const slideshowImages = [
   slideshow1,
@@ -51,5 +64,16 @@ export const slideshowImages = [
   slideshow23,
   slideshow24,
   slideshow25,
-  slideshow26
+  slideshow26,
+  slideshow27,
+  slideshow28,
+  slideshow29,
+  slideshow30,
+  slideshow31,
+  slideshow32,
+  slideshow33,
+  slideshow34,
+  slideshow35,
+  slideshow36,
+  slideshow37
 ];

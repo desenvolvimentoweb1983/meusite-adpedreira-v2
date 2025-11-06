@@ -1,6 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaFacebook,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 import devWebLuis from "../assets/slideshow2.jpg";
 import contatoJoao from "../assets/slideshow3.jpg";
 import igrejaFacebook from "../assets/slideshow1.jpg"; // imagem para o card do Facebook e Instagram
@@ -106,7 +112,7 @@ export default function Contato() {
             className="contato-img"
           />
           <h2>Assembleia de Deus JD Triunfo Pedreira</h2>
-          <p className="contato-funcao"> Página Oficial do Instagram</p>
+          <p className="contato-funcao">Página Oficial do Instagram</p>
           <a
             href="https://www.instagram.com/adi.pedreira?igsh=MXY2OGo1ejRlOTk3Zw=="
             target="_blank"
@@ -118,6 +124,37 @@ export default function Contato() {
           </a>
         </div>
       </div>
+
+      {/* ===================== Endereço e Como Chegar ===================== */}
+      <section className="contato-endereco">
+        <h2>
+          <FaMapMarkerAlt className="map-icon" />
+          Endereço e Como Chegar
+        </h2>
+        <p>Rua João Batista, 190 - Jardim Triunfo, Pedreira - SP</p>
+
+        {/* Mapa com o local exato da igreja */}
+        <iframe
+          title="Localização - Assembleia de Deus JD Triunfo Pedreira"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.3733136912213!2d-46.91184702474536!3d-22.74472337938195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8d77cfa3d0479%3A0x42014dc7f05b8a0!2sR.%20Jo%C3%A3o%20Batista%2C%20190%20-%20Jardim%20Triunfo%2C%20Pedreira%20-%20SP%2C%2013930-000!5e0!3m2!1spt-BR!2sbr!4v1730859000000!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="350"
+          style={{ border: 0, borderRadius: "10px", marginTop: "10px" }}
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
+
+        {/* Link direto e funcional para o Google Maps */}
+        <a
+          href="https://www.google.com/maps/place/R.+Jo%C3%A3o+Batista,+190+-+Jardim+Triunfo,+Pedreira+-+SP,+13930-000/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-maps"
+        >
+          <FaExternalLinkAlt style={{ marginRight: "6px" }} />
+          Abrir no Google Maps
+        </a>
+      </section>
     </main>
   );
 }
