@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 import devWebLuis from "../assets/slideshow2.jpg";
 import contatoJoao from "../assets/slideshow3.jpg";
+import contatoPaulo from "../assets/slideshow42.jpg";
+
 import igrejaFacebook from "../assets/slideshow1.jpg"; // imagem para o card do Facebook e Instagram
 import "../styles/contato.css";
 
@@ -28,6 +30,11 @@ export default function Contato() {
       <div className="contato-grid">
         {/* ===================== Contato Pastor Paulo Rosa ===================== */}
         <div className="contato-card">
+          <img
+            src={contatoPaulo}
+            alt="Pastor Paulo Rosa"
+            className="contato-img"
+          />
           <h2>Pr. Paulo Rosa</h2>
           <p className="contato-funcao">Pastor</p>
           <p className="contato-numero">+55 (19) 99823-7694</p>
