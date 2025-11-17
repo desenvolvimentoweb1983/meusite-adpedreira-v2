@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import {
   FaWhatsapp,
   FaFacebook,
-  FaInstagram,
   FaMapMarkerAlt,
   FaExternalLinkAlt,
 } from "react-icons/fa";
@@ -11,7 +10,7 @@ import devWebLuis from "../assets/slideshow2.jpg";
 import contatoJoao from "../assets/slideshow3.jpg";
 import contatoPaulo from "../assets/slideshow42.jpg";
 
-import igrejaFacebook from "../assets/slideshow1.jpg"; // imagem para o card do Facebook e Instagram
+import igrejaFacebook from "../assets/slideshow1.jpg"; 
 import "../styles/contato.css";
 
 export default function Contato() {
@@ -110,26 +109,6 @@ export default function Contato() {
             Visite nosso Facebook
           </a>
         </div>
-
-        {/* ===================== Card - Instagram da Igreja ===================== */}
-        <div className="contato-card">
-          <img
-            src={igrejaFacebook}
-            alt="Instagram da Assembleia de Deus JD Triunfo Pedreira"
-            className="contato-img"
-          />
-          <h2>Assembleia de Deus JD Triunfo Pedreira</h2>
-          <p className="contato-funcao">Página Oficial do Instagram</p>
-          <a
-            href="https://www.instagram.com/adi.pedreira?igsh=MXY2OGo1ejRlOTk3Zw=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-instagram"
-          >
-            <FaInstagram className="instagram-icon" />
-            Visite nosso Instagram
-          </a>
-        </div>
       </div>
 
       {/* ===================== Endereço e Como Chegar ===================== */}
@@ -140,7 +119,6 @@ export default function Contato() {
         </h2>
         <p>Rua João Batista, 190 - Jardim Triunfo, Pedreira - SP</p>
 
-        {/* Mapa com o local exato da igreja */}
         <iframe
           title="Localização - Assembleia de Deus JD Triunfo Pedreira"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.3733136912213!2d-46.91184702474536!3d-22.74472337938195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8d77cfa3d0479%3A0x42014dc7f05b8a0!2sR.%20Jo%C3%A3o%20Batista%2C%20190%20-%20Jardim%20Triunfo%2C%20Pedreira%20-%20SP%2C%2013930-000!5e0!3m2!1spt-BR!2sbr!4v1730859000000!5m2!1spt-BR!2sbr"
@@ -151,7 +129,6 @@ export default function Contato() {
           loading="lazy"
         ></iframe>
 
-        {/* Link direto e funcional para o Google Maps */}
         <a
           href="https://www.google.com/maps/place/R.+Jo%C3%A3o+Batista,+190+-+Jardim+Triunfo,+Pedreira+-+SP,+13930-000/"
           target="_blank"

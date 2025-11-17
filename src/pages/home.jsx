@@ -19,7 +19,6 @@ import slideshow24 from '../assets/slideshow24.jpg';
 import slideshow25 from '../assets/slideshow25.jpg';
 import slideshow26 from '../assets/slideshow26.jpg';
 import slideshow35 from '../assets/slideshow35.jpg';
-import slideshow38 from '../assets/slideshow38.jpg';
 import slideshow39 from '../assets/slideshow39.jpg';
 import slideshow40 from '../assets/slideshow40.jpg';
 import slideshow41 from '../assets/slideshow41.jpg';
@@ -98,7 +97,6 @@ export default function Home() {
             slideshow25,
             slideshow26,
             slideshow35,
-            slideshow38,
             slideshow39,
             slideshow40,
             slideshow41,
