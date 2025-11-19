@@ -62,7 +62,7 @@ export default function Home() {
       </Helmet>
 
       {/* Título */}
-      <h1 className="home-title">Assembleia de Deus JD Triunfo Pedreira - SP</h1>
+      <h1 className="home-title">Assembleia de Deus Ipiranga JD Triunfo Pedreira - SP</h1>
 
       {/* Barra de pesquisa */}
       <div className="home-search-google">

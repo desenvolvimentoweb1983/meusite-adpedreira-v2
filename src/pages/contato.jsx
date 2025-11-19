@@ -6,7 +6,7 @@ import {
   FaMapMarkerAlt,
   FaExternalLinkAlt,
 } from "react-icons/fa";
-import devWebLuis from "../assets/slideshow2.jpg";
+import devWebLuis from "../assets/logoLinkedIn4.png";
 import contatoJoao from "../assets/slideshow3.jpg";
 import contatoPaulo from "../assets/slideshow42.jpg";
 
@@ -130,14 +130,15 @@ export default function Contato() {
         ></iframe>
 
         <a
-          href="https://www.google.com/maps/place/R.+Jo%C3%A3o+Batista,+190+-+Jardim+Triunfo,+Pedreira+-+SP,+13930-000/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-maps"
-        >
-          <FaExternalLinkAlt style={{ marginRight: "6px" }} />
-          Abrir no Google Maps
+        href="https://www.google.com/maps/search/?api=1&query=R.+Jo%C3%A3o+Batista,+190,+Pedreira+-+SP"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-maps"
+>
+        <FaExternalLinkAlt style={{ marginRight: "6px" }} />
+        Abrir no Google Maps
         </a>
+
       </section>
     </main>
   );
